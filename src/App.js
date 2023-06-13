@@ -36,23 +36,23 @@ for (var i = 0; i < btns.length; i++) {
         
           <div className='flag-list container-flags'>
             <div>
-              <img src='./images/flags/sg.png' className='flags-list-lisenced' />
+              <img alt=''  src='./images/flags/sg.png' className='flags-list-lisenced' />
               <p>Singapore</p>
             </div>
             <div>
-              <img src='./images/flags/uk.png' className='flags-list-lisenced' />
+              <img alt=''  src='./images/flags/uk.png' className='flags-list-lisenced' />
               <p>UK</p>
             </div>
             <div>
-              <img src='./images/flags/hg.png' className='flags-list-lisenced' />
+              <img alt=''  src='./images/flags/hg.png' className='flags-list-lisenced' />
               <p>Hong Kong</p>
             </div>
             <div>
-              <img src='./images/flags/mc.png' style={{ height: "40px", objectFit: "cover" }} className='flags-list-lisenced' />
+              <img  alt='' src='./images/flags/mc.png' style={{ height: "40px", objectFit: "cover" }} className='flags-list-lisenced' />
               <p>Macao</p>
             </div>
             <div>
-              <img src='./images/flags/sg.png' className='flags-list-lisenced' />
+              <img alt=''  src='./images/flags/sg.png' className='flags-list-lisenced' />
               <p>Indonesia</p>
             </div>
         </div>
@@ -75,7 +75,7 @@ for (var i = 0; i < btns.length; i++) {
             <div className='sections-container'>
                 <div id="tab-inside-container">
                 <div id='payments' className='tab-menu-section'>
-                <img src='./images/home-tab-payment.svg' width="550"/>
+                <img  alt="" src='./images/home-tab-payment.svg' width="550"/>
                 <div className='text-tab-menu-spot'>
                   <h1 className='text-b text-tab-manu-title'>Payments</h1>
                   <p className='text-p text-tab-menu'>
@@ -85,7 +85,7 @@ for (var i = 0; i < btns.length; i++) {
                 </div>
               </div>
               <div id='collections' className='tab-menu-section' style={{flexDirection: "row-reverse"}}>
-                <img src='./images/home-tab-collection.svg' width="550"/>
+                <img alt=""  src='./images/home-tab-collection.svg' width="550"/>
                 <div className='text-tab-menu-spot'>
                   <h1 className='text-b text-tab-manu-title'>Collections</h1>
                   <p className='text-p text-tab-menu'>
@@ -95,7 +95,7 @@ for (var i = 0; i < btns.length; i++) {
                 </div>
               </div>
               <div id='conversions' className='tab-menu-section'>
-                <img src='./images/home-tab-conversion.svg' width="550"/>
+                <img alt=""  src='./images/home-tab-conversion.svg' width="550"/>
                 <div className='text-tab-menu-spot'>
                   <h1 className='text-b text-tab-manu-title'>Conversions</h1>
                   <p className='text-p text-tab-menu'>
@@ -105,7 +105,7 @@ for (var i = 0; i < btns.length; i++) {
                 </div>
               </div>
               <div id='account' className='tab-menu-section' style={{flexDirection: "row-reverse"}}>
-                <img src='./images/Frame.png' width="550"/>
+                <img alt=""  src='./images/Frame.png' width="550"/>
                 <div className='text-tab-menu-spot'>
                   <h1 className='text-b text-tab-manu-title'>Global Account</h1>
                   <p className='text-p text-tab-menu'>
@@ -115,7 +115,7 @@ for (var i = 0; i < btns.length; i++) {
                 </div>
               </div>
               <div id='cards' className='tab-menu-section'>
-                <img src='./images/Frame2.svg' width="550"/>
+                <img alt=""  src='./images/Frame2.svg' width="550"/>
                 <div className='text-tab-menu-spot'>
                   <h1 className='text-b text-tab-manu-title'>Cronicly Cards</h1>
                   <p className='text-p text-tab-menu'>
@@ -125,7 +125,7 @@ for (var i = 0; i < btns.length; i++) {
                 </div>
               </div>
               <div id='credits' className='tab-menu-section' style={{flexDirection: "row-reverse"}}>
-                <img src='./images/home-tab-credit.svg' width="550"/>
+                <img alt=""  src='./images/home-tab-credit.svg' width="550"/>
                 <div className='text-tab-menu-spot'>
                   <h1 className='text-b text-tab-manu-title'>Credit Line</h1>
                   <p className='text-p text-tab-menu'>
@@ -140,7 +140,7 @@ for (var i = 0; i < btns.length; i++) {
               <div className='sections-container-mobile' >
                 <div id="tab-inside-container" >
                 <div id='payments' className='tab-menu-section' style={{flexDirection: "column"}}>
-                <img src='./images/home-tab-payment.svg' width="550"/>
+                <img alt=""  src='./images/home-tab-payment.svg' width="550"/>
                 <div className='text-tab-menu-spot'>
                   <h1 className='text-b text-tab-manu-title'>Payments</h1>
                   <p className='text-p text-tab-menu'>
@@ -150,7 +150,7 @@ for (var i = 0; i < btns.length; i++) {
                 </div>
               </div>
               <div id='collections' className='tab-menu-section' style={{flexDirection: "column"}}>
-                <img src='./images/home-tab-collection.svg' width="550"/>
+                <img  alt="" src='./images/home-tab-collection.svg' width="550"/>
                 <div className='text-tab-menu-spot'>
                   <h1 className='text-b text-tab-manu-title'>Collections</h1>
                   <p className='text-p text-tab-menu'>
@@ -160,7 +160,7 @@ for (var i = 0; i < btns.length; i++) {
                 </div>
               </div>
               <div id='conversions' className='tab-menu-section' style={{flexDirection: "column"}}>
-                <img src='./images/home-tab-conversion.svg' width="550"/>
+                <img alt=""  src='./images/home-tab-conversion.svg' width="550"/>
                 <div className='text-tab-menu-spot'>
                   <h1 className='text-b text-tab-manu-title'>Conversions</h1>
                   <p className='text-p text-tab-menu'>
@@ -170,7 +170,7 @@ for (var i = 0; i < btns.length; i++) {
                 </div>
               </div>
               <div id='account' className='tab-menu-section' style={{flexDirection: "column"}}>
-                <img src='./images/Frame.png' width="550"/>
+                <img alt=""  src='./images/Frame.png' width="550"/>
                 <div className='text-tab-menu-spot'>
                   <h1 className='text-b text-tab-manu-title'>Global Account</h1>
                   <p className='text-p text-tab-menu'>
@@ -180,7 +180,7 @@ for (var i = 0; i < btns.length; i++) {
                 </div>
               </div>
               <div id='cards' className='tab-menu-section' style={{flexDirection: "column"}}>
-                <img src='./images/Frame2.svg' width="550"/>
+                <img  alt="" src='./images/Frame2.svg' width="550"/>
                 <div className='text-tab-menu-spot'>
                   <h1 className='text-b text-tab-manu-title'>Cronicly Cards</h1>
                   <p className='text-p text-tab-menu'>
@@ -190,7 +190,7 @@ for (var i = 0; i < btns.length; i++) {
                 </div>
               </div>
               <div id='credits' className='tab-menu-section' style={{flexDirection: "column",}}>
-                <img src='./images/home-tab-credit.svg' width="550"/>
+                <img alt=""  src='./images/home-tab-credit.svg' width="550"/>
                 <div className='text-tab-menu-spot'>
                   <h1 className='text-b text-tab-manu-title'>Credit Line</h1>
                   <p className='text-p text-tab-menu'>
@@ -211,16 +211,16 @@ for (var i = 0; i < btns.length; i++) {
       <div className='security-home-container'>
         <div className='security-home-inside'>
           <div>
-            <img src='./images/home-security-uk.svg'></img>
+            <img alt=""  src='./images/home-security-uk.svg'></img>
           </div>
           <div className='security-home-text-container'>
           <div className='security-home-text-spot'>
             <h1 className='text-b security-text-title'>We’re Serious About <span>Security</span></h1>
             <ul className='security-home-items'>
-              <li><img src='./images/tick-icon.svg' /><span>Receive real-time alerts with our dedicated fraud team</span></li>
-              <li><img src='./images/tick-icon.svg' /><span>24/7 account & system monitoring</span></li>
-              <li><img src='./images/tick-icon.svg' /><span>Protect your account and transactions with 2-factor authentication</span></li>
-              <li><img src='./images/tick-icon.svg' /><span>TranSwap is fully regulated and licensed to handle money by central banks and regulators around the world</span></li>
+              <li><img alt=""  src='./images/tick-icon.svg' /><span>Receive real-time alerts with our dedicated fraud team</span></li>
+              <li><img alt=""  src='./images/tick-icon.svg' /><span>24/7 account & system monitoring</span></li>
+              <li><img  alt="" src='./images/tick-icon.svg' /><span>Protect your account and transactions with 2-factor authentication</span></li>
+              <li><img alt=""  src='./images/tick-icon.svg' /><span>TranSwap is fully regulated and licensed to handle money by central banks and regulators around the world</span></li>
             </ul>
           </div>
           </div>
@@ -233,16 +233,16 @@ for (var i = 0; i < btns.length; i++) {
           <div style={{display: "flex", justifyContent: "center"}}>
           <div className='instructions-img-container'>
             <div>
-<img src='./images/home-step-1.svg'/>
-<img src='./images/1.png'/>
+<img alt=""  src='./images/home-step-1.svg'/>
+<img alt=""  src='./images/1.png'/>
             </div>
             <div>
-              <img src='./images/home-step-2.svg'/>
-              <img src='./images/2.png'/>
+              <img alt=""  src='./images/home-step-2.svg'/>
+              <img alt=""  src='./images/2.png'/>
             </div>
             <div>
-              <img src='./images/home-step-3.svg'/>
-              <img src='./images/3.png'/>
+              <img alt=""  src='./images/home-step-3.svg'/>
+              <img alt=""  src='./images/3.png'/>
             </div>
           </div>
           </div>

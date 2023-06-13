@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "./css/navbar.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faChevronDown, faArrowRight, faBarChart, faBars, faXmark } from "@fortawesome/free-solid-svg-icons"
+import { faChevronDown, faArrowRight, faBars, faXmark } from "@fortawesome/free-solid-svg-icons"
 function Navbar() {
      const [isScrolled, setIsScrolled] = useState(false)
      const [isFlagSelectionVisible, setIsFlagSelectionVisible] = useState(false)
