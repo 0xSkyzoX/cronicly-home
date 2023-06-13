@@ -65,6 +65,7 @@
      -ms-user-select: none;
      cursor: pointer;
      margin-left: 1rem;
+     margin-top: 1rem;
 }
 .bars-btn-mobile {
      margin-top: auto;
@@ -79,7 +80,7 @@
      display: flex;
      margin-top: auto;
      margin-left: 1rem;
-     
+     align-items: center;
 }
 
 .nav-items-inside li {

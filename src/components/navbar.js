@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import "./css/navbar.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronDown, faArrowRight, faBars, faXmark } from "@fortawesome/free-solid-svg-icons"
-function Navbar() {
+function Navbar(props) {
      const [isScrolled, setIsScrolled] = useState(false)
      const [isFlagSelectionVisible, setIsFlagSelectionVisible] = useState(false)
      const [isSidebarVisible, setIsSidebarVisible] = useState(false)
@@ -19,15 +19,13 @@ function Navbar() {
                }
           }
      }, [])
-
-
      return (
           <>
                <header className='navbar-container' id={isScrolled ? "visible" : "invisible"}>
 
-                    <div className='navbar-inside' >
+                    <div className='navbar-inside' id={props.id}>
                          <div>
-                              <img alt="" src='./images/logo-h.png' className='cronicly-logo' />
+                              <img alt="" src='./images/logo-h.png' onClick={() => {window.location.replace("/")}} className='cronicly-logo' />
                          </div>
 
                          <div className='nav-items-container'>
@@ -164,7 +162,7 @@ function Navbar() {
                     </div>
                     <div className='navbar-auth-items'>
                          <a href='/login' className='login-btn'>Log in</a>
-                         <div className='signup-section'><a href='/signup' style={{ textDecoration: "none" }}>Sign up <FontAwesomeIcon icon={faArrowRight} className="signup-arrow" /></a></div>
+                         <div className='signup-section' onClick={() => {window.location.replace("/register")}}><a href='/register' style={{ textDecoration: "none" }}>Sign up <FontAwesomeIcon icon={faArrowRight} className="signup-arrow" /></a></div>
                          <div >
                               <div className='flags-section' onClick={() => { setIsFlagSelectionVisible(!isFlagSelectionVisible) }}>
                                    <img alt="" src='./images/flags/uk.png' style={{
