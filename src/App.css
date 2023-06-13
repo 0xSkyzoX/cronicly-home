@@ -1,38 +1,612 @@
 .App {
-  text-align: center;
+     background-image: url("../public/patterns-bg.svg");
+     background-position: right top;
+     background-repeat: no-repeat;
+     width: 100%;
+     height: 1000px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home-desktop-uk {
+     background-image: url(../public/images/home-intro-desktop-uk.svg);
+     background-size: cover;
+     background-position: center;
+     width: 700px;
+     height: 521px;
+     margin-top: 5rem;
+     border-radius: 15px;
+     margin-left: 2rem;
+     margin-right: -20rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-main-container {
+     position: relative;
+     top: 10rem;
+     display: flex;
+     justify-content: center;
+     margin-bottom: 25rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.main-inside {
+     margin-left: 4rem;
+     margin-right: 2rem;
+     width: 1200px;
+     display: flex;
 }
 
-.App-link {
-  color: #61dafb;
+
+.text-p.text-tab-menu {
+     font-size: 24px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text-b.text-tab-manu-title {
+     font-size: 40px;
+}
+
+.home-tab-pane-btn {
+     width: 143px;
+     height: 46px;
+     color: #16171c;
+     background-color: transparent;
+     border: 1px solid #ced0d6;
+     border-radius: 8px;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     padding: 0;
+     font-family: Inter, sans-serif;
+     font-size: 16px;
+     line-height: 26px;
+     transition: color .2s, background-color .2s;
+     display: flex;
+     text-decoration: none;
+     user-select: none;
+}
+
+.sections-container {
+     display: flex;
+     justify-content: center;
+}
+
+.home-tab-pane-btn:hover {
+     color: #5a76ff;
+     background-color: #758cff23;
+}
+
+.text-tab-menu-spot {
+     margin-top: 5rem;
+}
+
+.flags-list.licensed-country {
+     margin-top: 37rem;
+     color: #494c57;
+     font-size: 18px;
+     background-image: url(../public/images/bg-style.svg);
+     background-repeat: no-repeat;
+     background-size: 15rem;
+}
+
+.text-b.financial-text {
+     font-size: 60px;
+     max-width: 800px;
+     margin-left: .5rem;
+     margin-right: .5rem;
+     margin-top: 2.5em;
+     text-align: center;
+}
+
+.home-tab-menu {
+     z-index: 50;
+     width: 100%;
+     height: 55px;
+     max-width: 1060px;
+     background-color: #ffffff;
+     border-bottom: 1px dashed #dcdee6;
+     justify-content: space-around;
+     margin-bottom: 100px;
+     display: flex;
+     position: -webkit-sticky;
+     position: sticky;
+     top: 100px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 3rem;
+}
+
+.tab-inside-container {
+     display: flex;
+     flex-direction: column;
+     gap: 7rem
+}
+
+#tab-inside-container {
+     display: flex;
+     flex-direction: column;
+     gap: 7rem
+}
+
+
+.home-tab-menu-item {
+     font-size: 20px;
+}
+
+.home-tab-menu-item {
+     height: 100%;
+     cursor: pointer;
+     flex-direction: column;
+     justify-content: space-between;
+     text-decoration: none;
+     display: flex;
+}
+
+.home-tab-menu-item-line {
+     height: 5px;
+     border-radius: 5px;
+     position: relative;
+     bottom: -3px;
+}
+
+.home-tab-menu-item.active .home-tab-menu-item-line {
+     background-color: #5954E9;
+     animation: show-tab .4s;
+}
+
+@keyframes show-tab {
+     from {
+          opacity: 0;
+          margin-right: 50px;
+     }
+}
+
+.home-tab-menu-item .home-tab-menu-item-text {
+     color: #16171c;
+}
+
+.home-tab-menu-item.active .home-tab-menu-item-text {
+     color: #5954E9;
+     animation: show-tab-text 1s;
+}
+
+@keyframes show-tab-text {
+     from {
+          opacity: .8;
+          color: #5954e9;
+     }
+
+}
+
+.text-b.financial-text span {
+     color: #5954e9;
+}
+
+.flag-list.container-flags {
+     display: flex;
+     gap: 5rem;
+     margin-top: 3rem;
+     margin-bottom: 2.5rem;
+     flex-wrap: wrap;
+     max-width: 800px;
+     margin-left: auto;
+     margin-right: auto;
+     justify-content: center;
+}
+
+.flag-list.container-flags div img {
+     display: flex;
+     margin-left: auto;
+     margin-right: auto;
+     background-color: white;
+     padding: 8px;
+     box-shadow: 0 0 15px rgba(0, 0, 0, 0.178);
+     border-radius: 50%;
+     object-fit: cover;
+}
+
+.a-style-1 {
+
+     text-align: center;
+     color: #76b5ff;
+}
+
+.text-center {
+     display: flex;
+     justify-content: center;
+     text-align: center;
+}
+
+.sections-container>div>div {
+     display: flex;
+     justify-content: space-between;
+}
+
+.tab-menu-section {
+     margin-left: 1rem;
+     margin-right: 1rem;
+}
+
+.flag-list.container-flags div p {
+     text-align: center;
+     margin-top: 1.5rem;
+}
+
+.flags-list>h2 {
+     text-align: center;
+}
+
+.flags-list-lisenced {
+     width: 40px;
+}
+
+.main-inside-text {
+     position: relative;
+     top: 8rem;
+}
+
+.text-b {
+     color: #16171c;
+     font-size: 60px;
+     letter-spacing: -0.1rem;
+}
+
+.text-b.main-second {
+     color: #5954e9;
+     max-width: 570px;
+}
+
+.text-p {
+     color: #252525ce;
+     font-family: Inter, sans-serif;
+     font-size: 20px;
+     line-height: 29px;
+     display: block;
+     max-width: 426px;
+     margin-bottom: 32px;
+     margin-top: 2.5rem;
+}
+
+.button-style-green {
+     width: 218px;
+     height: 56px;
+     color: #fff;
+     letter-spacing: -.02em;
+     background-color: #3dc342;
+     border-radius: 8px;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     font-family: Inter, sans-serif;
+     font-size: 17px;
+     font-weight: 700;
+     line-height: 24px;
+     display: flex;
+     border: 0;
+     cursor: pointer;
+}
+
+.sections-container-mobile {
+     display: flex;
+     justify-content: center;
+     justify-items: center;
+     margin-top: 5rem;
+     margin-left: 1.5rem;
+}
+
+.sections-container-mobile #tab-inside-container {
+     overflow-x: scroll;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+}
+
+.security-home-container {
+     display: flex;
+     justify-content: center;
+     margin-top: 7rem;
+
+}
+
+.security-home-inside {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     gap: 3rem;
+     max-width: 1000px;
+}
+
+.security-home-items {
+     list-style: none;
+     display: flex;
+     flex-direction: column;
+     gap: 3rem;
+}
+
+.security-home-items li {
+     display: flex;
+     align-items: center;
+}
+
+.security-home-text-spot h1 {
+     margin-bottom: 2rem;
+}
+
+.security-home-text-spot h1 span {
+     color: #5954E9;
+}
+
+.security-home-items li span {
+     margin-left: 2rem;
+     font-size: 20px;
+     color: #494c57;
+}
+
+.instructions-home-inside {
+     margin-top: 5rem;
+     margin-bottom: 7rem;
+}
+
+.instructions-img-container {
+     display: flex;
+     flex-wrap: wrap;
+     max-width: 1300px;
+     align-items: center;
+     justify-content: center;
+     margin-top: 2rem;
+}
+
+.instructions-img-container img {
+     width: 420px;
+}
+
+.instructions-img-container div img:nth-child(2) {
+     width: 100px;
+     position: absolute;
+     margin-top: -1rem;
+}
+
+.instructions-img-container div {
+     display: flex;
+     justify-content: center;
+}
+
+.instructions-home-container {
+     display: flex;
+     justify-content: center;
+     margin-top: 8rem;
+     background-image: url(../public/images/steps-bg.svg);
+     background-repeat: no-repeat;
+     background-position: right -0rem;
+     background-size: contain;
+     width: 100%;
+     background-color: #fafafd;
+     overflow: hidden;
+}
+
+.text-b.inst-hc {
+     font-size: 55px;
+     max-width: 840px;
+     text-align: center;
+     margin-left: auto;
+     margin-right: auto;
+}
+
+.text-b.inst-hc span {
+     color: #5954e9;
+}
+
+.support-text-top-footer {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     background-image: url(../public/images/action-bg.svg);
+     background-repeat: no-repeat;
+     height: 350px;
+     background-position: 0 10rem;
+}
+
+.support-text-top-footer h1 {
+     max-width: 900px;
+     text-align: center;
+     font-weight: 900;
+     font-size: 40px;
+     margin-top: 5rem;
+     opacity: .95;
+}
+.button-style-green.footer-top-support {
+     margin-top: 2.5rem;
+}
+/* Media Responsive Spot*/
+
+@media (max-width: 1060px) {
+     .navbar-auth-items {
+          margin-right: 10px;
+     }
+
+     .nav-items-inside {
+          margin-left: 0px;
+     }
+
+     .nav-items-inside li {
+          margin-right: 17px;
+          font-size: 16px;
+     }
+
+     .navbar-container img {
+          width: 100px;
+          margin-right: 0;
+     }
+}
+
+@media (max-width: 950px) {
+     .navbar-auth-items .flags-section {
+          padding: 10px 10px;
+          font-size: 10px;
+     }
+     
+
+     .navbar-auth-items .signup-section {
+          padding: 10px;
+     }
+
+     .navbar-auth-items>a {
+          font-size: 15px;
+     }
+
+     .navbar-auth-items .signup-section a {
+          font-size: 14px;
+     }
+
+     .tab-menu-section img {
+          width: 400px;
+     }
+
+     .tab-menu-section .text-tab-menu-spot h1 {
+          font-size: 35px;
+     }
+
+     .tab-menu-section .text-tab-menu-spot p {
+          font-size: 20px;
+     }
+}
+
+@media (max-width: 920px) {
+     .navbar-auth-items>a {
+          color: #5954e9;
+     }
+
+     .nav-items-inside li {
+          margin-right: 13px;
+          font-size: 14px;
+     }
+
+     .navbar-auth-items {
+          margin-right: 5px;
+     }
+
+     .nav-items-inside {
+          margin-left: -10px;
+     }
+}
+
+@media (max-width: 810px) {
+     .navbar-container img {
+          width: 100px;
+          margin-left: -1px;
+     }
+
+     .home-tab-menu .home-tab-menu-item-text {
+          font-size: 17px;
+     }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 810px) {
+     .navbar-container img {
+          width: 80px;
+          margin-left: -1px;
+     }
+}
+
+@media (max-width: 768px) {
+     .nav-items-inside {
+          display: none;
+     }
+
+     .navbar-auth-items .signup-section {
+          display: none;
+     }
+
+     .navbar-auth-items>a {
+          display: none;
+     }
+
+     .navbar-container {
+          background-color: white;
+     }
+
+     .security-home-inside div>img {
+          max-width: 320px;
+     }
+
+     .text-b.security-text-title {
+          font-size: 50px;
+     }
+     .support-text-top-footer h1  {
+          font-size: 35px;
+          
+     }
+
+}
+
+@media (min-width: 769px) {
+     .bars-btn-mobile {
+          display: none;
+     }
+
+     #sidebar-container {
+          display: none;
+     }
+    
+}
+
+@media (max-width: 640px) {
+     .home-tab-menu {
+          display: none;
+     }
+
+     .sections-container {
+          display: none
+     }
+
+     .tab-inside-container {
+          display: flex;
+          flex-direction: row;
+     }
+
+     .sections-container-mobile .tab-menu-section .text-b.text-tab-manu-title {
+          margin-bottom: -10px;
+     }
+}
+
+@media (min-width: 640px) {
+     .sections-container-mobile {
+          display: none;
+     }
+}
+
+@media (max-width: 500px) {
+     .text-b.financial-text {
+          font-size: 50px;
+     }
+
+     .tab-menu-section img {
+          width: 350px;
+     }
+
+     .support-text-top-footer h1  {
+          font-size: 30px;
+          margin-top: 1.5rem;
+     }
+
+     .main-inside {
+          margin-left: 1.2rem;
+     }
+
+     .navbar-auth-items .flags-section {
+          margin-left: -.4rem;
+     }
+}
+
+@media (max-width: 1020px) {
+     .security-home-inside {
+          flex-direction: column;
+     }
+
+     .security-home-text-container {
+          display: flex;
+          justify-content: center;
+          max-width: 700px;
+     }
+
+     .security-home-text-spot {
+          margin: 0 1rem;
+     }
+
 }
