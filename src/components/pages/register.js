@@ -14,14 +14,13 @@ function Register() {
   const [emailMessage, setEmailMessage] = useState(false)
   const [alreadyRegistredAccount, setAlreadyRegistredAccount] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
-  const [invalidData, setInvalidData] = useState(false)
 
   const handleSignup = async (e) => {
     e.preventDefault();
 
     const signupData = { username, email, password };
     try {
-      const response = await fetch('http://localhost:3336/signup', {
+      const response = await fetch('https://api-cronicly-server.onrender.com/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -102,9 +101,7 @@ function Register() {
           {
             isSuccess && <p style={{ color: "white", backgroundColor: "green", padding: "6px 10px", paddingTop: "6px", fontSize: "15px", outlineColor: "orange", outlineWidth: "1px", outlineOffset: "1px", borderRadius: "4px", marginBottom: "-38px", marginTop: "10px", display: "flex", opacity: "0.8" }}>Registred successfully!</p>
           }
-          {
-            invalidData && <p style={{ color: "white", backgroundColor: "red", padding: "5px 7px", paddingTop: "6px", fontSize: "15px", outlineColor: "orange", outlineWidth: "1px", outlineOffset: "1px", borderRadius: "4px", marginBottom: "-38px", marginTop: "10px", display: "flex", opacity: "0.85" }}>Invalid Email, Password or Name.</p>
-          }
+          
 
           <form onSubmit={handleSignup} className="signup-form">
             <div>
