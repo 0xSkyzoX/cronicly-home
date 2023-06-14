@@ -20,9 +20,8 @@ function Register() {
     e.preventDefault();
 
     const signupData = { username, email, password };
-
     try {
-      const response = await fetch('http://localhost:3335/signup', {
+      const response = await fetch('http://localhost:3336/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -46,9 +45,7 @@ function Register() {
         } else {
           setUsernameMessage(false)
         }
-        return setInvalidData(true)
-      } else {
-        setInvalidData(false)
+        return 0;
       }
 
 
