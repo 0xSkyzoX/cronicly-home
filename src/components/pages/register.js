@@ -110,7 +110,7 @@ setIsLoading(true)
 
       
           <div className='loading-container' style={isLoading ? {display: "flex"} : {display: "none"}}>
-          <img src="./images/34338d26023e5515f6cc8969aa027bca_w200.gif" className='loading-gif'/>
+          <img alt='' src="./images/34338d26023e5515f6cc8969aa027bca_w200.gif" className='loading-gif'/>
           </div>
           
           <form onSubmit={handleSignup} className="signup-form">
