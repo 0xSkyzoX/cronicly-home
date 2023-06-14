@@ -214,8 +214,10 @@ function Navbar(props) {
                     </div>
                     <div className='sidebar-inside'>
                          <div className='auth-buttons-spot'>
-                              <button className='sidebar-login-btn'>Log in</button>
-                              <button className='sidebar-signup-btn'>Sign up</button>
+                              <button className='sidebar-login-btn' onClick={() => {
+                                   window.location.replace("/login")
+                              }}>Log in</button>
+                              <button className='sidebar-signup-btn' onClick={() => {window.location.replace("/register")}}>Sign up</button>
                          </div>
                          <div className='dropdown-link-items'>
                               <div className='dropdown-item'>
