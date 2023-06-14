@@ -17,6 +17,25 @@ function Register() {
 
   const handleSignup = async (e) => {
     e.preventDefault();
+    
+    if (password.length < 8 || username.length < 2 || email.length < 2) {
+      if (password.length < 8) {
+        setStrongPasswordMessage(true)
+      } else {
+        setStrongPasswordMessage(false)
+      }
+      if (email.length < 2) {
+        setEmailMessage(true)
+      } else {
+        setEmailMessage(false)
+      }
+      if (username.length < 2) {
+        setUsernameMessage(true)
+      } else {
+        setUsernameMessage(false)
+      }
+      return 0;
+    }
 
     const signupData = { username, email, password };
     try {
@@ -27,27 +46,6 @@ function Register() {
         },
         body: JSON.stringify(signupData)
       });
-
-      if (password.length < 8 || username.length < 2 || email.length < 2) {
-        if (password.length < 8) {
-          setStrongPasswordMessage(true)
-        } else {
-          setStrongPasswordMessage(false)
-        }
-        if (email.length < 2) {
-          setEmailMessage(true)
-        } else {
-          setEmailMessage(false)
-        }
-        if (username.length < 2) {
-          setUsernameMessage(true)
-        } else {
-          setUsernameMessage(false)
-        }
-        return 0;
-      }
-
-
       if (response.status === 409) {
         console.log("This account is already registred.")
         setTimeout(() => {
