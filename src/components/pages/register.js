@@ -14,11 +14,12 @@ function Register() {
   const [emailMessage, setEmailMessage] = useState(false)
   const [alreadyRegistredAccount, setAlreadyRegistredAccount] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
-
+const [isLoading, setIsLoading] = useState(false)
   const handleSignup = async (e) => {
     e.preventDefault();
-    
+setIsLoading(true)
     if (password.length < 8 || username.length < 2 || email.length < 2) {
+      setIsLoading(false)
       if (password.length < 8) {
         setStrongPasswordMessage(true)
       } else {
@@ -45,9 +46,13 @@ function Register() {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(signupData)
-      });
+      })
+        
+    
+      
       if (response.status === 409) {
         console.log("This account is already registred.")
+        setIsLoading(false)
         setTimeout(() => {
           setAlreadyRegistredAccount(false)
         }, 10000)
@@ -58,8 +63,10 @@ function Register() {
       } else {
         setAlreadyRegistredAccount(false)
       }
+      
       if (response.ok) {
         // Signup successful
+        setIsLoading(false)
         console.log('Signup successful');
         setIsSuccess(true)
         setEmail("")
@@ -85,10 +92,11 @@ function Register() {
 
   return (
     <div>
+      
       <Navbar id="register-navbar" />
       <div className='signup-container'>
         <img alt="" src='./images/logo-h.png' className='cronicly-logo' />
-        <div className='signup-form-inside'>
+        <div className='signup-form-inside' style={isLoading ? {opacity: ".5", userSelect: "none", cursor: "wait"}: {opacity: ".9"}}>
           <div className='signup-form-top'>
             <h2>Register your account</h2>
             <p>Already have an account? <a href='/login'>Sign in</a></p>
@@ -99,8 +107,12 @@ function Register() {
           {
             isSuccess && <p style={{ color: "white", backgroundColor: "green", padding: "6px 10px", paddingTop: "6px", fontSize: "15px", outlineColor: "orange", outlineWidth: "1px", outlineOffset: "1px", borderRadius: "4px", marginBottom: "-38px", marginTop: "10px", display: "flex", opacity: "0.8" }}>Registred successfully!</p>
           }
-          
 
+      
+          <div className='loading-container' style={isLoading ? {display: "flex"} : {display: "none"}}>
+          <img src="./images/34338d26023e5515f6cc8969aa027bca_w200.gif" className='loading-gif'/>
+          </div>
+          
           <form onSubmit={handleSignup} className="signup-form">
             <div>
               <label >Full Name</label>
@@ -147,7 +159,7 @@ function Register() {
 
             </div>
 
-            <button className='btn-primary' type='submit' id='register-btn' >Register</button>
+            <button className='btn-primary' type='submit' id='register-btn' style={isLoading ? {cursor: "wait"}: {cursor: "pointer"}} disabled={isLoading ? true : false}> Register</button>
           </form>
 
         </div>
