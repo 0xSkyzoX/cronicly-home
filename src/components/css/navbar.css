@@ -294,10 +294,18 @@
      padding-bottom: 15px;
      padding-right: 0rem;
      padding-left: 0.7rem;
+     align-items: center;
+     align-content: center;
 }
 
+
+.subnav-item img {
+     position: relative;
+     margin-top: auto;
+}
 .subnav-icon {
      width: 50px;
+     margin-bottom: auto;
 }
 
 .subnav-text h2 {

@@ -14,10 +14,11 @@ function Register() {
   const [emailMessage, setEmailMessage] = useState(false)
   const [alreadyRegistredAccount, setAlreadyRegistredAccount] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
-const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+  var type = "user"
   const handleSignup = async (e) => {
     e.preventDefault();
-setIsLoading(true)
+    setIsLoading(true)
     if (password.length < 8 || username.length < 2 || email.length < 2) {
       setIsLoading(false)
       if (password.length < 8) {
@@ -38,7 +39,7 @@ setIsLoading(true)
       return 0;
     }
 
-    const signupData = { username, email, password };
+    const signupData = { username, email, password, type};
     try {
       const response = await fetch('https://api-cronicly-server.onrender.com/signup', {
         method: 'POST',
@@ -47,23 +48,22 @@ setIsLoading(true)
         },
         body: JSON.stringify(signupData)
       })
-        
-    
-      
       if (response.status === 409) {
+        //Account Already Registred
         console.log("This account is already registred.")
         setIsLoading(false)
         setTimeout(() => {
           setAlreadyRegistredAccount(false)
-        }, 10000)
+        }, 500000)
         setStrongPasswordMessage(false)
         setUsernameMessage(false)
         setEmailMessage(false)
+        setIsSuccess(false)
         return setAlreadyRegistredAccount(true)
       } else {
         setAlreadyRegistredAccount(false)
       }
-      
+
       if (response.ok) {
         // Signup successful
         setIsLoading(false)
@@ -77,7 +77,8 @@ setIsLoading(true)
         setStrongPasswordMessage(false)
         setTimeout(() => {
           setIsSuccess(false)
-        }, 10000)
+        }, 500000)
+        setAlreadyRegistredAccount(false)
       } else {
         setIsSuccess(false)
         // Signup failed
@@ -86,17 +87,13 @@ setIsLoading(true)
     } catch (error) {
       console.error('Error occurred during signup:', error);
     }
-
-
   };
-
   return (
     <div>
-      
       <Navbar id="register-navbar" />
       <div className='signup-container'>
         <img alt="" src='./images/logo-h.png' className='cronicly-logo' />
-        <div className='signup-form-inside' style={isLoading ? {opacity: ".5", userSelect: "none", cursor: "wait"}: {opacity: ".9"}}>
+        <div className='signup-form-inside' style={isLoading ? { opacity: ".5", userSelect: "none", cursor: "wait" } : { opacity: ".9" }}>
           <div className='signup-form-top'>
             <h2>Register your account</h2>
             <p>Already have an account? <a href='/login'>Sign in</a></p>
@@ -107,12 +104,10 @@ setIsLoading(true)
           {
             isSuccess && <p style={{ color: "white", backgroundColor: "green", padding: "6px 10px", paddingTop: "6px", fontSize: "15px", outlineColor: "orange", outlineWidth: "1px", outlineOffset: "1px", borderRadius: "4px", marginBottom: "-38px", marginTop: "10px", display: "flex", opacity: "0.8" }}>Registred successfully!</p>
           }
-
-      
-          <div className='loading-container' style={isLoading ? {display: "flex"} : {display: "none"}}>
-          <img alt='' src="./images/34338d26023e5515f6cc8969aa027bca_w200.gif" className='loading-gif'/>
+          <div className='loading-container' style={isLoading ? { display: "flex" } : { display: "none" }}>
+            <img alt='' src="./images/34338d26023e5515f6cc8969aa027bca_w200.gif" className='loading-gif' />
           </div>
-          
+
           <form onSubmit={handleSignup} className="signup-form">
             <div>
               <label >Full Name</label>
@@ -120,7 +115,12 @@ setIsLoading(true)
                 type="text"
                 placeholder="What's your full name?"
                 value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                onChange={(e) => {
+                  setUsername(e.target.value)
+                  if (e.target.value) {
+                    setUsernameMessage(false)
+                  }
+                }}
                 style={usernameMessage ? { border: "solid 1px red", outlineColor: "red" } : { border: "solid 1px rgb(0, 0, 0, .4)" }}
               />
               {
@@ -134,7 +134,12 @@ setIsLoading(true)
                 type="email"
                 placeholder="you@example.com"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => {
+                  setEmail(e.target.value)
+                if (e.target.value) {
+                  setEmailMessage(false)
+                }
+                }}
                 style={emailMessage ? { border: "solid 1px red", outlineColor: "red" } : { border: "solid 1px rgb(0, 0, 0, .4)" }}
               />
               {
@@ -148,7 +153,12 @@ setIsLoading(true)
                   type={isSlashEye ? "text" : "password"}
                   placeholder="What's your password?"
                   value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  onChange={(e) => {
+                    setPassword(e.target.value)
+                    if (e.target.value.length > 8) {
+                      setStrongPasswordMessage(false)
+                    }
+                  }}
                   style={strongPasswordMessage ? { border: "solid 1px red", outlineColor: "red" } : { border: "solid 1px rgb(0, 0, 0, .4)" }}
                 />
                 <FontAwesomeIcon icon={isSlashEye ? faEye : faEyeSlash} onClick={() => { setIsSlashEye(!isSlashEye) }} style={{ display: "flex", marginLeft: "-50px", position: "relative", right: "10px", marginTop: "10px", zIndex: "1000", cursor: "pointer", userSelect: "none" }} />
@@ -156,12 +166,10 @@ setIsLoading(true)
               {
                 strongPasswordMessage && <p style={{ color: "red", opacity: ".6", fontSize: "15px", position: "relative", top: "3px", marginBottom: "-17px" }}>Enter a password more than 8 letter</p>
               }
-
             </div>
 
-            <button className='btn-primary' type='submit' id='register-btn' style={isLoading ? {cursor: "wait"}: {cursor: "pointer"}} disabled={isLoading ? true : false}> Register</button>
+            <button className='btn-primary' type='submit' id='register-btn' style={isLoading ? { cursor: "wait" } : { cursor: "pointer" }} disabled={isLoading ? true : false}> Register</button>
           </form>
-
         </div>
       </div>
       <Footer />

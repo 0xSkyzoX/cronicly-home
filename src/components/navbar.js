@@ -70,7 +70,7 @@ function Navbar(props) {
                                                        </div>
                                                   </div>
                                                   <div className='subnav-item'>
-                                                       <img alt="" className='subnav-icon' style={{ width: "35px", height: "36px", marginRight: "1rem", aspectRatio: "auto" }} src='./images/solutions/credits.png'></img >
+                                                       <img alt="" className='subnav-icon' style={{ width: "35px", height: "36px", marginRight: "1rem" }} src='./images/solutions/credits.png'></img >
                                                        <div className='subnav-text'>
                                                             <h2>Credit</h2>
                                                             <p>Secure working capital</p>
@@ -84,28 +84,28 @@ function Navbar(props) {
                                         <div className='subnav-container'>
                                              <div className='subnav-inside'>
                                                   <div className='subnav-item'>
-                                                       <img alt="" className='subnav-icon' style={{ width: "35px", height: "36px", marginRight: "1rem", aspectRatio: "auto" }} src='./images/company/about.svg'></img >
+                                                       <img alt="" className='subnav-icon' style={{ width: "35px", height: "36px", marginRight: "1rem" }} src='./images/company/about.svg'></img >
                                                        <div className='subnav-text'>
                                                             <h2>About Us</h2>
                                                             <p>All about Cronicly</p>
                                                        </div>
                                                   </div>
                                                   <div className='subnav-item'>
-                                                       <img alt="" className='subnav-icon' style={{ width: "35px", height: "36px", marginRight: "1rem", aspectRatio: "auto" }} src='./images/company/bag.svg'></img >
+                                                       <img alt="" className='subnav-icon' style={{ width: "35px", height: "36px", marginRight: "1rem" }} src='./images/company/bag.svg'></img >
                                                        <div className='subnav-text'>
                                                             <h2>Careers</h2>
                                                             <p>Work at Cronicly</p>
                                                        </div>
                                                   </div>
                                                   <div className='subnav-item'>
-                                                       <img alt="" className='subnav-icon' style={{ width: "35px", height: "36px", marginRight: "1rem", aspectRatio: "auto" }} src='./images/company/info.svg'></img >
+                                                       <img alt="" className='subnav-icon' style={{ width: "35px", height: "36px", marginRight: "1rem",  marginTop: "auto"}} src='./images/company/info.svg'></img >
                                                        <div className='subnav-text'>
                                                             <h2>News & Media</h2>
                                                             <p>Our latest publications</p>
                                                        </div>
                                                   </div>
                                                   <div className='subnav-item'>
-                                                       <img alt="" className='subnav-icon' style={{ width: "35px", height: "36px", marginRight: "1rem", aspectRatio: "auto" }} src='./images/company/safe.svg'></img >
+                                                       <img alt="" className='subnav-icon' style={{ width: "35px", height: "36px", marginRight: "1rem", marginTop: "auto" }} src='./images/company/safe.svg'></img >
                                                        <div className='subnav-text'>
                                                             <h2>Licenses</h2>
                                                             <p>More about out licenses</p>
@@ -119,35 +119,35 @@ function Navbar(props) {
                                         <div className='subnav-container'>
                                              <div className='subnav-inside'>
                                                   <div className='subnav-item'>
-                                                       <img alt="" className='subnav-icon' style={{ width: "35px", height: "36px", marginRight: "1rem", aspectRatio: "auto" }} src='./images/resources/blog.svg'></img >
+                                                       <img alt="" className='subnav-icon' style={{ width: "35px", height: "36px", marginRight: "1rem" }} src='./images/resources/blog.svg'></img >
                                                        <div className='subnav-text'>
                                                             <h2>Blog</h2>
                                                             <p>Latest news and insights</p>
                                                        </div>
                                                   </div>
                                                   <div className='subnav-item'>
-                                                       <img alt="" className='subnav-icon' style={{ width: "35px", height: "36px", marginRight: "1rem", aspectRatio: "auto" }} src='./images/resources/help.svg'></img >
+                                                       <img alt="" className='subnav-icon' style={{ width: "35px", height: "36px", marginRight: "1rem" }} src='./images/resources/help.svg'></img >
                                                        <div className='subnav-text'>
                                                             <h2>Help Center</h2>
                                                             <p>Contact us for support</p>
                                                        </div>
                                                   </div>
                                                   <div className='subnav-item'>
-                                                       <img alt="" className='subnav-icon' style={{ width: "35px", height: "36px", marginRight: "1rem", aspectRatio: "auto" }} src='./images/resources/license.svg'></img >
+                                                       <img alt="" className='subnav-icon' style={{ width: "35px", height: "36px", marginRight: "1rem" }} src='./images/resources/license.svg'></img >
                                                        <div className='subnav-text'>
                                                             <h2>Partnerships</h2>
                                                             <p>Collaboration and opportunities</p>
                                                        </div>
                                                   </div>
                                                   <div className='subnav-item'>
-                                                       <img alt="" className='subnav-icon' style={{ width: "35px", height: "36px", marginRight: "1rem", aspectRatio: "auto" }} src='./images/resources/dev.svg'></img >
+                                                       <img alt="" className='subnav-icon' style={{ width: "35px", height: "36px", marginRight: "1rem" }} src='./images/resources/dev.svg'></img >
                                                        <div className='subnav-text'>
                                                             <h2>Developers</h2>
                                                             <p>API & other resources</p>
                                                        </div>
                                                   </div>
                                                   <div className='subnav-item'>
-                                                       <img alt="" className='subnav-icon' style={{ width: "35px", height: "36px", marginRight: "1rem", aspectRatio: "auto" }} src='./images/resources/safe.svg'></img >
+                                                       <img alt="" className='subnav-icon' style={{ width: "35px", height: "36px", marginRight: "1rem"}} src='./images/resources/safe.svg'></img >
                                                        <div className='subnav-text'>
                                                             <h2>Safely & Securely</h2>
                                                             <p>How to indentify Cronicly</p>
