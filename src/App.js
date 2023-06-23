@@ -52,7 +52,7 @@ for (var i = 0; i < btns.length; i++) {
               <p>Macao</p>
             </div>
             <div>
-              <img alt=''  src='./images/flags/in.svg' className='flags-list-lisenced' />
+              <img alt=''  src='./images/flags/ind.png' className='flags-list-lisenced' />
               <p>Indonesia</p>
             </div>
         </div>
